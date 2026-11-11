@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int index;
+
+    cout << "Enter array index (0-4): ";
+    cin >> index;
+
+    try {
+        if (index < 0 || index >= 5) {
+            throw index;
+        }
+
+        cout << "Element at index " << index
+             << " = " << arr[index] << endl;
+    }
+    catch (int x) {
+        cout << "Error: Invalid array index!" << endl;
+    }
+
+    return 0;
+}
